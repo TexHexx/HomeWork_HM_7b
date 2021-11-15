@@ -1,0 +1,18 @@
+syntax = "proto2";
+package studentsGroupProto;
+
+message FullName {
+	required string name = 1;
+	required string lastName = 2;
+	optional string surname = 3;
+}
+
+message Student {
+	required FullName fullName = 1;
+	repeated int32 marks = 2;
+	required float averageMarks = 3;
+}
+
+message StudentsGroup {
+	repeated Student students = 1;
+}

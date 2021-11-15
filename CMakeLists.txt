@@ -7,7 +7,7 @@ project ("HomeWork_HM_7b")
 find_package(Protobuf CONFIG REQUIRED)
 include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS studentsGroupProto.proto)
 add_executable(${PROJECT_NAME} "HomeWork_HM_7b.cpp" "HomeWork_HM_7b.h" ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(HomeWork_HM_7b PRIVATE protobuf::libprotoc protobuf::libprotobuf protobuf::libprotobuf-lite)
-
 # TODO: Add tests and install targets if needed.
